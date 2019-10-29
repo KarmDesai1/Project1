@@ -23,4 +23,18 @@ if ($Body != strlen($Body)>=500) {
 if (empty($Skill)) {
     $message = "Please type a skills in";
 }
+elseif (strpos($Skill,',') === true)
+{
+    $Array = explode(',', $Skill);
+    print_r($Array);
+}
 
+
+else {
+
+}
+
+?>
+<html>
+<button type="button"><a href="index3.html">Back</a></button>
+</html>
