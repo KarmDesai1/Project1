@@ -1,23 +1,23 @@
 <?php
 // get the data from the form
-$email= filter_input(INPUT_POST,'email_address');
+$email= filter_input(INPUT_POST,'email');
 $password = filter_input(INPUT_POST,"password");
-$first = filter_input(INPUT_POST,"First_Name");
-$last = filter_input(INPUT_POST,"Last_Name");
-$birthday = filter_input(INPUT_POST,"Birthday");
+$first = filter_input(INPUT_POST,"first");
+$last = filter_input(INPUT_POST,"last");
+$birthday = filter_input(INPUT_POST,"birthday");
 
 // validate form data
 $i = strpos($email,'@');
 if (empty($email)) {
     echo("Please type a email in");
 }
-elseif ($i === false) {
+else if ($i === false) {
     echo('There is no @ in the email');
 }
 if (empty($password)) {
     echo ("Please type a password in");
 }
-elseif (strlen($password)<=8) {
+else if (strlen($password)<=8) {
     echo ("The Password needs to greater than 8 characters");
 }
 if (empty($first)) {
@@ -32,4 +32,5 @@ if (empty($birthday)) {
 ?>
 <html>
 <button type="button"><a href="index2.html">Back</a></button>
+
 </html>

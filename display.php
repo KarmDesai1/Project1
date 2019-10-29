@@ -9,7 +9,7 @@ if (empty($email_address)) {
     echo("Please type a email in");
 }
 else if ($i === false) {
-        echo ('There is no @ in the email');
+    echo ('There is no @ in the email');
 }
 
 if (empty($password)) {
